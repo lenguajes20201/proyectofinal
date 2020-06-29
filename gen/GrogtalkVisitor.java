@@ -1,4 +1,4 @@
-// Generated from C:/Users/User/Desktop/Lenguajes Interprete/chocopyInterprete/chocopyInterprete/grammar\Grogtalk.g4 by ANTLR 4.8
+// Generated from D:/Users/ACER/Documents/2020-1_SEMESTRE_9/Lenguajes de programacion/proyectofinal/grammar\Grogtalk.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -40,6 +40,12 @@ public interface GrogtalkVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitSize(GrogtalkParser.SizeContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#type}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitType(GrogtalkParser.TypeContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link GrogtalkParser#tags}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -76,6 +82,84 @@ public interface GrogtalkVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitAbilities(GrogtalkParser.AbilitiesContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#senses}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSenses(GrogtalkParser.SensesContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#saving_throws}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSaving_throws(GrogtalkParser.Saving_throwsContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#skills}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSkills(GrogtalkParser.SkillsContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#damage_immunities}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDamage_immunities(GrogtalkParser.Damage_immunitiesContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#damage_resistances}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDamage_resistances(GrogtalkParser.Damage_resistancesContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#damage_vulnerabilities}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDamage_vulnerabilities(GrogtalkParser.Damage_vulnerabilitiesContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#condition_immunities}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCondition_immunities(GrogtalkParser.Condition_immunitiesContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#languages}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLanguages(GrogtalkParser.LanguagesContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#challenge}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitChallenge(GrogtalkParser.ChallengeContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#special_traits}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSpecial_traits(GrogtalkParser.Special_traitsContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#actions}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitActions(GrogtalkParser.ActionsContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#reactions}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitReactions(GrogtalkParser.ReactionsContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#legendary_actions}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLegendary_actions(GrogtalkParser.Legendary_actionsContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link GrogtalkParser#taglist}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -106,33 +190,45 @@ public interface GrogtalkVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitHit_points_expr(GrogtalkParser.Hit_points_exprContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#common_expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCommon_expr(GrogtalkParser.Common_exprContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#action_obj}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAction_obj(GrogtalkParser.Action_objContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#action_expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAction_expr(GrogtalkParser.Action_exprContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#key}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitKey(GrogtalkParser.KeyContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link GrogtalkParser#value}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitValue(GrogtalkParser.ValueContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link GrogtalkParser#speed_expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitSpeed_expr(GrogtalkParser.Speed_exprContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link GrogtalkParser#walking_speed}.
+	 * Visit a parse tree produced by {@link GrogtalkParser#modifier}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitWalking_speed(GrogtalkParser.Walking_speedContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GrogtalkParser#speed_obj}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitSpeed_obj(GrogtalkParser.Speed_objContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link GrogtalkParser#speed_expr1}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitSpeed_expr1(GrogtalkParser.Speed_expr1Context ctx);
-	/**
-	 * Visit a parse tree produced by {@link GrogtalkParser#speed_aux_expr}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitSpeed_aux_expr(GrogtalkParser.Speed_aux_exprContext ctx);
+	T visitModifier(GrogtalkParser.ModifierContext ctx);
 }
