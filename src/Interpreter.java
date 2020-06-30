@@ -8,7 +8,7 @@ public class Interpreter {
 	public static void toMarkdown ( Creature criatura){
 		Creature c = criatura;
 		String result = "___\n";
-		//result = result +"> ## "+c.getName()+"\n";
+		result = result.concat("___\n");
 		result = result.concat("> ## "+c.getName()+"\n");
 		result = result.concat(String.format(">*%s %s %s, %s*\n",c.getSize(), c.getType(), c.getTagsString(), c.getAlignment()));
 		result = result.concat("> ___\n");
