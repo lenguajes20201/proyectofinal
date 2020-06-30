@@ -105,7 +105,7 @@ public class MyVisitor<T> extends GrogtalkBaseVisitor <T>{
         String hitPointExpr = (String) visitHit_points_expr(ctx.hit_points_expr());
         Criatura.setHitPoints(hitPointExpr);
 
-        return visitChildren(ctx);
+        return null;
 
     }
     /**

@@ -3,7 +3,7 @@
 	type:"mounstrosity",
 	size:"large",
 	alignment:"unaligned",
-	armorClass: "14(natural armor), 11 while prone",
+	armorClass: "14 (natural armor), 11 while prone",
 	hp: 39 (6d10+6),
 	speed: "30 ft., burrow 10ft.",
 	abilities:[17(+3),11(+0),13(+1),1(-5),13(+1),6(-2)],

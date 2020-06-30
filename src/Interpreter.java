@@ -6,6 +6,9 @@ public class Interpreter {
 
 
 	public static void toMarkdown ( Creature criatura){
+		String intro = "*The aboleth can take 3 legendary actions, choosing from the option below. Only one legendary " +
+				"action option can be used at a time amd only at the  end of another creature's turn. The aboleth regains" +
+				"spent legendary actions at the start of its turn.*";
 		Creature c = criatura;
 		String result = "___\n";
 		result = result.concat("___\n");
@@ -38,6 +41,8 @@ public class Interpreter {
 		result = result.concat((c.getReactions() != null)?String.format("%s\n", c.getReactionsString()):"");
 
 		result = result.concat((c.getLegendaryActions() != null)?"> ### Legendary Actions\n":"");
+		result = result.concat((c.getLegendaryActions() != null)?String.format("%s\n", intro):"");
+		result = result.concat(">\n");
 		result = result.concat((c.getLegendaryActions() != null)?String.format("%s\n", c.getLegendaryActionsString()):"");
 
 		System.out.println(result);
