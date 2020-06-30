@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Creature {
     String Name, Size, Type, Alignment, ArmorClass, HitPoints, Speed,SavingThrows, Skills, dam_resistances,
@@ -198,11 +199,49 @@ public class Creature {
 
         tagsOut = "(";
         for (String tag : tags) {
-            tagsOut.concat(tag+", ");
+            tagsOut = tagsOut.concat(tag+", ");
         }
-        tagsOut.substring(0,tagsOut.length()-1);
-        tagsOut.concat(")");
+        tagsOut = tagsOut.substring(0,tagsOut.length()-1);
+        tagsOut = tagsOut.concat(")");
         return tagsOut;
+    }
+    public String getAbilitiesString (){
+        String abilities = "|";
+
+        for (String ability : AbilityScores) {
+            abilities = abilities.concat(ability+"|");
+        }
+        return abilities;
+    }
+
+    public String getActionsString (){
+        String actionsT = "";
+
+        for (HashMap.Entry<String,String> action: Actions.entrySet()) {
+            actionsT = actionsT.concat(String.format("> ***%s***. %s\n",action.getKey(),action.getValue()));
+            actionsT = actionsT.concat(">\n");
+        }
+        return actionsT;
+    }
+
+    public String getReactionsString (){
+        String actionsT = "";
+
+        for (HashMap.Entry<String,String> action: Reactions.entrySet()) {
+            actionsT = actionsT.concat(String.format("> ***%s***. %s\n",action.getKey(),action.getValue()));
+            actionsT = actionsT.concat(">\n");
+        }
+        return actionsT;
+    }
+
+    public String getLegendaryActionsString (){
+        String actionsT = "";
+
+        for (HashMap.Entry<String,String> action: LegendaryActions.entrySet()) {
+            actionsT = actionsT.concat(String.format("> ***%s***. %s\n",action.getKey(),action.getValue()));
+            actionsT = actionsT.concat(">\n");
+        }
+        return actionsT;
     }
 
 
