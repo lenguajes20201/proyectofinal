@@ -30,9 +30,14 @@ public class Interpreter {
 		result = result.concat((c.getLanguages() != null)?String.format("> - **Languages** %s\n",c.getLanguages()):"");
 		result = result.concat((c.getChallenge() != null)?String.format("> - **Challenge** %s\n",c.getChallenge()):"");
 		result = result.concat("> ___\n");
+
 		result = result.concat("> ### Actions\n");
 		result = result.concat((c.getActions() != null)?String.format("%s\n", c.getActionsString()):"");
+
+		result = result.concat((c.getReactions() != null)?"> ### Reactions\n":"");
 		result = result.concat((c.getReactions() != null)?String.format("%s\n", c.getReactionsString()):"");
+
+		result = result.concat((c.getLegendaryActions() != null)?"> ### Legendary Actions\n":"");
 		result = result.concat((c.getLegendaryActions() != null)?String.format("%s\n", c.getLegendaryActionsString()):"");
 
 		System.out.println(result);

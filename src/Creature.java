@@ -221,6 +221,7 @@ public class Creature {
             actionsT = actionsT.concat(String.format("> ***%s***. %s\n",action.getKey(),action.getValue()));
             actionsT = actionsT.concat(">\n");
         }
+        actionsT = actionsT.concat(">");
         return actionsT;
     }
 
@@ -231,6 +232,7 @@ public class Creature {
             actionsT = actionsT.concat(String.format("> ***%s***. %s\n",action.getKey(),action.getValue()));
             actionsT = actionsT.concat(">\n");
         }
+        actionsT = actionsT.concat(">");
         return actionsT;
     }
 
@@ -241,6 +243,7 @@ public class Creature {
             actionsT = actionsT.concat(String.format("> ***%s***. %s\n",action.getKey(),action.getValue()));
             actionsT = actionsT.concat(">\n");
         }
+        actionsT = actionsT.concat(">");
         return actionsT;
     }
 
